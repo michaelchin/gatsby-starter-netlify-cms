@@ -29,6 +29,7 @@ export const IndexPageTemplate = ({
       <div
         style={{
           display: 'flex',
+          'max-width': '800px',
           height: '150px',
           lineHeight: '1',
           justifyContent: 'space-around',
@@ -39,10 +40,7 @@ export const IndexPageTemplate = ({
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
+            color: 'lightgrey',
             lineHeight: '1',
             padding: '0.25em',
           }}
@@ -52,16 +50,20 @@ export const IndexPageTemplate = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
+            color: 'seashell',
             lineHeight: '1',
             padding: '0.25em',
           }}
         >
           {subheading}
         </h3>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div style={{color: 'white', 'font-size': '40px'}}>lala</div>
       </div>
     </div>
     <section className="section section--gradient">

@@ -3,7 +3,7 @@ templateKey: index-page
 title: GPlates website demo
 image: /img/background.png
 heading: GPlates website demo
-subheading: say something blablabla....
+subheading: GPlates offers a novel combination of interactive plate-tectonic reconstructions, geographic information system (GIS) functionality and raster data visualisation.
 mainpitch:
   title: Why Kaldi
   description: >
