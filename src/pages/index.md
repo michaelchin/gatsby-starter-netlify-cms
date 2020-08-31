@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: GPlates website demo
 image: /img/background.png
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: GPlates website demo
+subheading: say something blablabla....
 mainpitch:
   title: Why Kaldi
   description: >
