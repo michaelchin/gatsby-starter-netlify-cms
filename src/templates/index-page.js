@@ -22,25 +22,29 @@ export const IndexPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
+        backgroundPosition: `center`,
+        textAlign: `center`,
       }}
     >
       <div
         style={{
           display: 'flex',
-          'max-width': '800px',
-          height: '150px',
+          width: '100%',
+          maxWidth: '1280px',
           lineHeight: '1',
           justifyContent: 'space-around',
           alignItems: 'left',
           flexDirection: 'column',
+          paddingLeft: '1em',
+          paddingRight: '1em',
+          paddingBottom: '2em',
         }}
       >
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            color: 'lightgrey',
+            fontFamily: 'monospace',
+            color: 'lawngreen',
             lineHeight: '1',
             padding: '0.25em',
           }}
@@ -53,6 +57,10 @@ export const IndexPageTemplate = ({
             color: 'seashell',
             lineHeight: '1',
             padding: '0.25em',
+            maxWidth: '768px',
+            lineHeight: '1.5',
+            margin: 'auto',
+            backgroundColor: 'rgba(76, 76, 76, 0.5)',
           }}
         >
           {subheading}
@@ -63,7 +71,34 @@ export const IndexPageTemplate = ({
         <br></br>
         <br></br>
         <br></br>
-        <div style={{color: 'white', 'font-size': '40px'}}>lala</div>
+        <br></br>
+        <br></br>
+
+        <p>
+          <a href="https://sourceforge.net/projects/gplates/files/gplates/2.2/"
+             style={{
+                color: '#fff',
+                textDecoration: 'underline',
+                fontStyle: 'italic',
+                fontSize: 'large',
+             }}
+          >
+            Latest release v2.2
+          </a>
+          <br></br>
+        </p>
+        <br></br><br></br>
+        <p>
+          <a className="button is-warning" href="https://sourceforge.net/projects/gplates/files/gplates/2.2/"
+             style={{
+               color: 'blue',
+               boxShadow: 'inset 0 0 0 2px #000',
+               backgroundColor: 'gold',
+             }}
+          >
+            Install Now
+          </a>
+        </p>
       </div>
     </div>
     <section className="section section--gradient">

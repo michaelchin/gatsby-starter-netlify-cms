@@ -1,11 +1,11 @@
 ---
 templateKey: index-page
-title: GPlates website demo
+title: GPlates
 image: /img/background.png
-heading: GPlates website demo
+heading: GPlates
 subheading: GPlates offers a novel combination of interactive plate-tectonic reconstructions, geographic information system (GIS) functionality and raster data visualisation.
 mainpitch:
-  title: Why Kaldi
+  title: Why GPlates
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
     shouldn't just taste good, it should do good too. We source all of our beans

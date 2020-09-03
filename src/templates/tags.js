@@ -54,7 +54,7 @@ export const tagPageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 1000
+      limit: 1
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {

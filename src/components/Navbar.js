@@ -42,7 +42,7 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '40px', 'max-height': '40px' }} />
+              <img src={logo} alt="GPlates" style={{ width: '40px', 'maxHeight': '40px' }} />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -61,25 +61,40 @@ const Navbar = class extends React.Component {
           >
             <div className="navbar-start has-text-centered">
               <Link className="navbar-item" to="/about">
-                About
+                News
               </Link>
               <Link className="navbar-item" to="/products">
-                Products
+                Screenshots
               </Link>
               <Link className="navbar-item" to="/blog">
-                Blog
+                Features
               </Link>
               <Link className="navbar-item" to="/contact">
-                Contact
+                Download
               </Link>
               <Link className="navbar-item" to="/contact/examples">
-                Form Examples
+                Data
+              </Link>
+              <Link className="navbar-item" to="/products">
+                User Docs
+              </Link>
+              <Link className="navbar-item" to="/blog">
+                Publications
+              </Link>
+              <Link className="navbar-item" to="/contact">
+                GPML
+              </Link>
+              <Link className="navbar-item" to="/contact/examples">
+                AuScope
+              </Link>
+              <Link className="navbar-item" to="/contact/examples">
+                Contact Us
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
               <a
                 className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+                href="https://github.com/GPlates"
                 target="_blank"
                 rel="noopener noreferrer"
               >
