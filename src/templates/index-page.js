@@ -6,6 +6,13 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
+import GPlatesMainScreenshot from '../img/SATL_ExponentialStretching_650x380.png'
+import logo from '../img/logo.svg'
+import pygplatesLogo from '../img/pygplates-screenshot.png' 
+import portalScreenshot from '../img/portal-screenshot.png'
+import gwsScreenshot from '../img/gws-screenshot.png'
+import forumScreenshot from '../img/forum-screenshot.png'
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -24,6 +31,7 @@ export const IndexPageTemplate = ({
         })`,
         backgroundPosition: `center`,
         textAlign: `center`,
+        minHeight: `500px`,
       }}
     >
       <div
@@ -40,17 +48,11 @@ export const IndexPageTemplate = ({
           paddingBottom: '2em',
         }}
       >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            fontFamily: 'monospace',
-            color: 'lawngreen',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
+        <img
+          src={logo}
+          alt="GPlates Logo"
+          style={{ width: '20em', height: '4em', margin: '1em auto' }}
+        />
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
@@ -101,36 +103,120 @@ export const IndexPageTemplate = ({
         </p>
       </div>
     </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
+
+
+    <div className="container" style={{backroundImage: `background`}}>
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
+
+                <div className="container"
+                  style={{
+                    backgroundColor: '#f0f0f0',
+                    boxShadow: '0px 0px 50px rgba(0, 0, 0, 0.2) inset',
+                    marginTop: '5rem',
+                    borderRadius: '15px',
+                  }}
+                >
+                <div className="columns section">
+                  <div className="column is-7">
+                    <div className="tile">
+                      <h1 className="title">{mainpitch.title}</h1>
+                    </div>
+                    <div className="tile">
+                      <p className="subtitle">{mainpitch.description}
+                      {description}<a href="https://www.google.com">hehe</a></p>
+                    </div>
                   </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
+
+                  <div className="column is-5">    
+                    <img
+                      src={GPlatesMainScreenshot}
+                      alt="GPlates Screenshot"
+                      style={{  }}
+                    /> 
                   </div>
                 </div>
-                <div className="columns">
-                  <div className="column is-12">
+                <div 
+                  style={{textAlign:'center'}}
+                >
+                  <a className="button is-link" href="https://sourceforge.net/projects/gplates/files/gplates/2.2/"
+                    style={{ }}
+                  >
+                    Learn More...
+                  </a>
+                  <br></br><br></br>
+                </div>
+                </div>
+
+
+                <div className="container"
+                  style={{
+                    marginTop: '5rem',
+                  }}
+                >
+                  <div>
                     <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
+                      GPlates is more than a desktop software now!
                     </h3>
-                    <p>{description}</p>
+                  </div>
+                  <div className="columns section is-multiline">
+                    <div className="column is-6" style={{textAlign:'center'}}>
+                      <img
+                        src={pygplatesLogo}
+                        alt="GPlates Screenshot"
+                        style={{
+                          maxWidth: '340px',  
+                          boxShadow: '20px 20px 20px -20px rgba(0,0,0,0.57)',
+                          border: 'black 1px solid',
+                          borderRadius: '10px',
+                        }}
+                      />  
+                      <h3 className="">pyGPlates</h3> 
+                    </div>
+                    <div className="column is-6" style={{textAlign:'center'}}>
+                      <img
+                        src={portalScreenshot}
+                        alt="GPlates Screenshot"
+                        style={{
+                          maxWidth: '340px',  
+                          boxShadow: '20px 20px 20px -20px rgba(0,0,0,0.57)',
+                          border: 'black 1px solid',
+                          borderRadius: '10px',
+                        }}
+                      />  
+                      <h3 className="">GPlates Portal</h3> 
+                    </div>
+                    <div className="column is-6" style={{textAlign:'center'}}>
+                      <img
+                        src={gwsScreenshot}
+                        alt="GPlates Web Service Screenshot"
+                        style={{
+                          maxWidth: '340px',  
+                          boxShadow: '20px 20px 20px -20px rgba(0,0,0,0.57)',
+                          border: 'black 1px solid',
+                          borderRadius: '10px',
+                        }}
+                      />  
+                      <h3 className="">GPlates Web Services</h3> 
+                    </div>                  
+                    <div className="column is-6" style={{textAlign:'center'}}>
+                      <img
+                        src={forumScreenshot}
+                        alt="GPlates Forum Screenshot"
+                        style={{
+                          maxWidth: '340px',  
+                          boxShadow: '20px 20px 20px -20px rgba(0,0,0,0.57)',
+                          border: 'black 1px solid',
+                          borderRadius: '10px',
+                        }}
+                      />  
+                      <h3 className="">GPlates Forum</h3> 
+                    </div>
                   </div>
                 </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
+
+
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
                     Latest stories
@@ -145,9 +231,7 @@ export const IndexPageTemplate = ({
               </div>
             </div>
           </div>
-        </div>
       </div>
-    </section>
   </div>
 )
 

@@ -5,16 +5,15 @@ image: /img/background.png
 heading: GPlates
 subheading: GPlates offers a novel combination of interactive plate-tectonic reconstructions, geographic information system (GIS) functionality and raster data visualisation.
 mainpitch:
-  title: Why GPlates
+  title: What is GPlates?
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
+    GPlates offers a novel combination of interactive plate-tectonic reconstructions, 
+    geographic information system (GIS) functionality and raster data visualisation. 
+    GPlates enables both the visualisation and the manipulation of plate-tectonic 
+    reconstructions and associated data through geological time.  
+description: GPlates is desktop software for the interactive visualisation of plate-tectonics.
+  GPlates is free software (also known as open-source software), licensed for distribution under 
+  the GNU General Public License [GPL](https://www.gnu.org/licenses/old-licenses/lgpl-2.0.html), version 2.
 intro:
   blurbs:
     - image: /img/coffee.png
