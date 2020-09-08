@@ -149,3 +149,47 @@ $menu-label-color: $white-ter
 
 .notification
   padding: 0.5rem
+
+.mc-card
+  boxShadow: 20px 20px 20px -20px rgba(0,0,0,0.57)
+  border: black 1px solid
+  borderRadius: 10px
+
+.mc-a
+  text-decoration: underline
+
+.mc-card-overlay 
+  position: absolute
+  bottom: 100%
+  left: 0
+  right: 0
+  background-color: rgba(0,140,186,0.57)
+  overflow: hidden
+  width: 100%
+  height: 0%
+  transition: .5s ease
+
+.mc-card-container
+  position: relative
+  max-width: 360px
+  margin: auto
+
+.mc-card-container:hover .mc-card-overlay
+  bottom: 0
+  height: 100%
+  cursor: pointer
+
+.mc-overlay-text
+  color: yellow
+  font-size: 20px
+  font-weight: bold
+  position: absolute
+  top: 50%
+  left: 50%
+  -webkit-transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+  text-align: center
+
+.mc-message
+  box-shadow: 10px 10px 54px -6px rgba(250,210,90,0.85)

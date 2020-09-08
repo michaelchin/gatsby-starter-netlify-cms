@@ -13,7 +13,7 @@ mainpitch:
     reconstructions and associated data through geological time.  
 description: GPlates is desktop software for the interactive visualisation of plate-tectonics.
   GPlates is free software (also known as open-source software), licensed for distribution under 
-  the GNU General Public License [GPL](https://www.gnu.org/licenses/old-licenses/lgpl-2.0.html), version 2.
+  the GNU General Public License <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.0.html" target="_blank">GPL</a>, version 2.
 intro:
   blurbs:
     - image: /img/coffee.png

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+//import Features from '../components/Features'
+import LatestNews from '../components/LatestNews'
 
 import GPlatesMainScreenshot from '../img/SATL_ExponentialStretching_650x380.png'
 import logo from '../img/logo.svg'
@@ -56,8 +56,8 @@ export const IndexPageTemplate = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
+            //display: 'none',
             color: 'seashell',
-            lineHeight: '1',
             padding: '0.25em',
             maxWidth: '768px',
             lineHeight: '1.5',
@@ -148,80 +148,129 @@ export const IndexPageTemplate = ({
                   <br></br><br></br>
                 </div>
                 </div>
+                <br></br>
 
+                <article className="message mc-message">
+                  <div className="message-body">
+                    <strong>Citation:</strong><br></br>
+                    <cite> Müller, R. D., Cannon, J., Qin, X., Watson, R. J., Gurnis, M., Williams, S., et al. 2018. 
+                      GPlates: Building a virtual Earth through deep time. Geochemistry, Geophysics, Geosystems, 19. doi:10.1029/2018GC007584.
+                    </cite>
+                    </div>
+                </article>
+
+                <hr></hr>
 
                 <div className="container"
                   style={{
-                    marginTop: '5rem',
+                    marginTop: '2rem',
                   }}
                 >
                   <div>
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      GPlates is more than a desktop software now!
+                    <h3 className="has-text-weight-semibold is-size-2" style={{ marginBottom: '0'}}>
+                      GPlates Suite
                     </h3>
                   </div>
                   <div className="columns section is-multiline">
-                    <div className="column is-6" style={{textAlign:'center'}}>
-                      <img
-                        src={pygplatesLogo}
-                        alt="GPlates Screenshot"
-                        style={{
-                          maxWidth: '340px',  
-                          boxShadow: '20px 20px 20px -20px rgba(0,0,0,0.57)',
-                          border: 'black 1px solid',
-                          borderRadius: '10px',
-                        }}
-                      />  
-                      <h3 className="">pyGPlates</h3> 
+                    <div className="column is-6" 
+                      style={{
+                        textAlign:'center'
+                      }}
+                    >
+                      <h3 className=""><a className="mc-a" href="https://www.gplates.org/docs/pygplates/" target="_blank" rel="noreferrer">pyGPlates</a></h3> 
+                      <div className="mc-card-container">
+                        <img
+                          src={pygplatesLogo}
+                          alt="pyGPlates Screenshot"
+                          className="mc-card"
+                          style={{
+                          }}
+                          />
+                        <div className="mc-card-overlay">
+                          <div className="mc-overlay-text">https://www.gplates.org/docs/pygplates/</div>
+                        </div>
+                      </div>
+                      <br></br>
+                      <p style={{textAlign:'left'}}>
+                        The GPlates Python library (pyGPlates) enables access to GPlates functionality via the Python programming language. 
+                        It allows users to use GPlates in a programmatic way and hence provides much more flexibility than the GPlates desktop interface can offer. 
+                      </p>
                     </div>
                     <div className="column is-6" style={{textAlign:'center'}}>
+                    <h3 className=""><a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">GPlates Portal</a></h3> 
+                    <div className="mc-card-container">
                       <img
                         src={portalScreenshot}
-                        alt="GPlates Screenshot"
+                        alt="GPlates Portal Screenshot"
+                        className="mc-card"
                         style={{
-                          maxWidth: '340px',  
-                          boxShadow: '20px 20px 20px -20px rgba(0,0,0,0.57)',
-                          border: 'black 1px solid',
-                          borderRadius: '10px',
+                         
                         }}
                       />  
-                      <h3 className="">GPlates Portal</h3> 
+                      <div className="mc-card-overlay">
+                        <div className="mc-overlay-text">https://portal.gplates.org/</div>
+                      </div>
+                      </div>
+                      <br></br>
+                      <p style={{textAlign:'left'}}>
+                        The GPlates Web Portal is a gateway to a series of web pages for the interactive visualisation of cutting-edge geoscience datasets, 
+                        all possible within freely available web browsers.
+                      </p>
                     </div>
                     <div className="column is-6" style={{textAlign:'center'}}>
+                    <h3 className=""><a className="mc-a" href="https://gws.gplates.org/" target="_blank" rel="noreferrer">GPlates Web Services</a></h3> 
+                    <div className="mc-card-container">
                       <img
                         src={gwsScreenshot}
                         alt="GPlates Web Service Screenshot"
+                        className="mc-card"
                         style={{
-                          maxWidth: '340px',  
-                          boxShadow: '20px 20px 20px -20px rgba(0,0,0,0.57)',
-                          border: 'black 1px solid',
-                          borderRadius: '10px',
+                          
                         }}
-                      />  
-                      <h3 className="">GPlates Web Services</h3> 
+                      /> 
+                      <div className="mc-card-overlay">
+                        <div className="mc-overlay-text">https://gws.gplates.org/</div>
+                      </div>
+                      </div> 
+                      <br></br>
+                      <p style={{textAlign:'left'}}>
+                        GPlates web service interface allows users to access plate tectonics reconstruction services via Internet. 
+                        The interface has been designed to provide paleo-geographic coordinates in a simplest way.
+                        The service can be used in any devices which have implemented HTTP protocol and have Internet connection.
+                      </p>
                     </div>                  
                     <div className="column is-6" style={{textAlign:'center'}}>
+                    <h3 className=""><a className="mc-a" href="https://discourse.gplates.org/" target="_blank" rel="noreferrer">GPlates Forum</a></h3> 
+                    <div className="mc-card-container">
                       <img
                         src={forumScreenshot}
                         alt="GPlates Forum Screenshot"
+                        className="mc-card"
                         style={{
-                          maxWidth: '340px',  
-                          boxShadow: '20px 20px 20px -20px rgba(0,0,0,0.57)',
-                          border: 'black 1px solid',
-                          borderRadius: '10px',
+                          
                         }}
                       />  
-                      <h3 className="">GPlates Forum</h3> 
+                      <div className="mc-card-overlay">
+                        <div className="mc-overlay-text">https://discourse.gplates.org/</div>
+                      </div>
+                      </div>
+                      <br></br>
+                      <p style={{textAlign:'left'}}>
+                        Welcome to the GPlates Community Forum!
+                        This online forum is a place for the users, developers and researchers to discuss GPlates related topics.
+                      </p>
                     </div>
                   </div>
                 </div>
 
+                <br></br>
+                <hr></hr>
 
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                    Latest News
                   </h3>
-                  <BlogRoll />
+                  <LatestNews />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/blog">
                       Read more
