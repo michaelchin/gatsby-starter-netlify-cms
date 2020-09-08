@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-class LatestNews extends React.Component {
+class NewsList extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -11,14 +11,24 @@ class LatestNews extends React.Component {
     return (
       <div className="columns is-multiline">
         {posts &&
-          posts.slice(0,5).map(({ node: post }) => (
-            <div className="is-parent column is-12" key={post.id}>
+          posts.map(({ node: post }) => (
+            <div className="is-parent column is-6" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
                 <header>
+                  {post.frontmatter.featuredimage ? (
+                    <div className="featured-thumbnail">
+                      <PreviewCompatibleImage
+                        imageInfo={{
+                          image: post.frontmatter.featuredimage,
+                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                        }}
+                      />
+                    </div>
+                  ) : null}
                   <p className="post-meta">
                     <Link
                       className="title has-text-primary is-size-4"
@@ -33,7 +43,7 @@ class LatestNews extends React.Component {
                   </p>
                 </header>
                 <p>
-                  {post.frontmatter.description}
+                  {post.excerpt}
                   <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
@@ -48,7 +58,7 @@ class LatestNews extends React.Component {
   }
 }
 
-LatestNews.propTypes = {
+NewsList.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -59,7 +69,7 @@ LatestNews.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query LatestNewsQuery {
+      query NewsListQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "news" } } }
@@ -76,7 +86,6 @@ export default () => (
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
-                description
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {
@@ -90,6 +99,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <LatestNews data={data} count={count} />}
+    render={(data, count) => <NewsList data={data} count={count} />}
   />
 )
