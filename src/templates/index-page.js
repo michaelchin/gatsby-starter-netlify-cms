@@ -121,7 +121,7 @@ export const IndexPageTemplate = ({
                 <div className="columns section">
                   <div className="column is-7">
                     <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
+                      <h1 className="mc-title title">{mainpitch.title}</h1>
                     </div>
                     <div className="tile">
                       <p className="subtitle">{mainpitch.description}
@@ -159,7 +159,7 @@ export const IndexPageTemplate = ({
                     </div>
                 </article>
 
-                <hr></hr>
+                <br></br>
 
                 <div className="container"
                   style={{
@@ -172,6 +172,7 @@ export const IndexPageTemplate = ({
                     </h3>
                   </div>
                   <div className="columns section is-multiline">
+
                     <div className="column is-6" 
                       style={{
                         textAlign:'center'
@@ -186,9 +187,11 @@ export const IndexPageTemplate = ({
                           style={{
                           }}
                           />
-                        <div className="mc-card-overlay">
-                          <div className="mc-overlay-text">https://www.gplates.org/docs/pygplates/</div>
-                        </div>
+                        <a className="mc-a" href="https://www.gplates.org/docs/pygplates/" target="_blank" rel="noreferrer">
+                          <div className="mc-card-overlay">
+                            <div className="mc-overlay-text">https://www.gplates.org/docs/pygplates/</div>
+                          </div>
+                        </a>
                       </div>
                       <br></br>
                       <p style={{textAlign:'left'}}>
@@ -196,20 +199,23 @@ export const IndexPageTemplate = ({
                         It allows users to use GPlates in a programmatic way and hence provides much more flexibility than the GPlates desktop interface can offer. 
                       </p>
                     </div>
+
                     <div className="column is-6" style={{textAlign:'center'}}>
-                    <h3 className=""><a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">GPlates Portal</a></h3> 
-                    <div className="mc-card-container">
-                      <img
-                        src={portalScreenshot}
-                        alt="GPlates Portal Screenshot"
-                        className="mc-card"
-                        style={{
-                         
-                        }}
-                      />  
-                      <div className="mc-card-overlay">
-                        <div className="mc-overlay-text">https://portal.gplates.org/</div>
-                      </div>
+                      <h3 className=""><a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">GPlates Portal</a></h3> 
+                      <div className="mc-card-container">
+                        <img
+                          src={portalScreenshot}
+                          alt="GPlates Portal Screenshot"
+                          className="mc-card"
+                          style={{
+                          
+                          }}
+                        />  
+                        <a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">
+                        <div className="mc-card-overlay">
+                          <div className="mc-overlay-text">https://portal.gplates.org/</div>
+                        </div>
+                        </a>
                       </div>
                       <br></br>
                       <p style={{textAlign:'left'}}>
@@ -217,20 +223,23 @@ export const IndexPageTemplate = ({
                         all possible within freely available web browsers.
                       </p>
                     </div>
+
                     <div className="column is-6" style={{textAlign:'center'}}>
-                    <h3 className=""><a className="mc-a" href="https://gws.gplates.org/" target="_blank" rel="noreferrer">GPlates Web Services</a></h3> 
-                    <div className="mc-card-container">
-                      <img
-                        src={gwsScreenshot}
-                        alt="GPlates Web Service Screenshot"
-                        className="mc-card"
-                        style={{
-                          
-                        }}
-                      /> 
-                      <div className="mc-card-overlay">
-                        <div className="mc-overlay-text">https://gws.gplates.org/</div>
-                      </div>
+                      <h3 className=""><a className="mc-a" href="https://gws.gplates.org/" target="_blank" rel="noreferrer">GPlates Web Services</a></h3> 
+                        <div className="mc-card-container">
+                          <img
+                            src={gwsScreenshot}
+                            alt="GPlates Web Service Screenshot"
+                            className="mc-card"
+                            style={{
+                              
+                            }}
+                          /> 
+                          <a className="mc-a" href="https://gws.gplates.org/" target="_blank" rel="noreferrer">
+                            <div className="mc-card-overlay">
+                              <div className="mc-overlay-text">https://gws.gplates.org/</div>
+                            </div>
+                          </a>
                       </div> 
                       <br></br>
                       <p style={{textAlign:'left'}}>
@@ -239,20 +248,24 @@ export const IndexPageTemplate = ({
                         The service can be used in any devices which have implemented HTTP protocol and have Internet connection.
                       </p>
                     </div>                  
+                    
                     <div className="column is-6" style={{textAlign:'center'}}>
-                    <h3 className=""><a className="mc-a" href="https://discourse.gplates.org/" target="_blank" rel="noreferrer">GPlates Forum</a></h3> 
-                    <div className="mc-card-container">
-                      <img
-                        src={forumScreenshot}
-                        alt="GPlates Forum Screenshot"
-                        className="mc-card"
-                        style={{
-                          
-                        }}
-                      />  
-                      <div className="mc-card-overlay">
-                        <div className="mc-overlay-text">https://discourse.gplates.org/</div>
-                      </div>
+                      <h3 className=""><a className="mc-a" href="https://discourse.gplates.org/" target="_blank" rel="noreferrer">GPlates Forum</a></h3> 
+                        <div className="mc-card-container">
+                          <img
+                            src={forumScreenshot}
+                            alt="GPlates Forum Screenshot"
+                            className="mc-card"
+                            style={{
+                              
+                            }}
+                          />  
+
+                        <a className="mc-a" href="https://discourse.gplates.org/" target="_blank" rel="noreferrer">
+                          <div className="mc-card-overlay">
+                            <div className="mc-overlay-text">https://discourse.gplates.org/</div>
+                          </div>
+                        </a>
                       </div>
                       <br></br>
                       <p style={{textAlign:'left'}}>
@@ -264,7 +277,7 @@ export const IndexPageTemplate = ({
                 </div>
 
                 <br></br>
-                <hr></hr>
+                <hr className="mc-hr"></hr>
 
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
