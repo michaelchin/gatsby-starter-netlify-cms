@@ -35,13 +35,15 @@ class Screenshots extends React.Component {
           <div className="columns is-multiline">
           {posts &&
             posts.map(({ node: post }) => (
-            <div className="is-parent column is-4" key={post.id}>
-              <PreviewCompatibleImage
-                imageInfo={{
-                  image: post.frontmatter.image,
-                  alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                }}
-              />       
+            <div className="is-parent column is-4" key={post.id} title={post.frontmatter.title}>
+              <Link to={post.fields.slug}>   
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: post.frontmatter.image,
+                    alt: `screenshot image thumbnail for  ${post.frontmatter.title}`,
+                  }}
+                /> 
+              </Link>      
             </div>
           ))}
           </div>
