@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: GPlates
-image: /img/background.png
+image: /img/Starry-Night-Van-Gogh-Which-Stars-GoogleArtProject-1024x545.jpg
 heading: GPlates
 subheading: GPlates offers a novel combination of interactive plate-tectonic reconstructions, geographic information system (GIS) functionality and raster data visualisation.
 mainpitch:

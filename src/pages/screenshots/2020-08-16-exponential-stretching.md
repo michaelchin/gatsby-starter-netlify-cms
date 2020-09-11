@@ -1,6 +1,6 @@
 ---
 templateKey: 'screenshots'
-title: 'screenshots 1'
+title: 'SATL ExponentialStretching'
 date: 2020-08-18T15:04:10.000Z
 image: ../../img/SATL_ExponentialStretching_650x380.png
 description: >-

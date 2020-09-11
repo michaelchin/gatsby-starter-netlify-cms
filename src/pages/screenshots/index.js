@@ -3,7 +3,6 @@ import Layout from '../../components/Layout'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
-import BackgroundImage from '../../../static/img/background.png'
 
 class Screenshots extends React.Component {
   render() {
@@ -15,15 +14,15 @@ class Screenshots extends React.Component {
         <div
           className="full-width-image-container margin-top-0"
           style={{
-            backgroundImage: `url(${BackgroundImage})`,
+            backgroundImage: `url('/img/Starry-Night-Van-Gogh-Which-Stars-GoogleArtProject-1024x545.jpg')`,
           }}
         >
           <h2
             className="has-text-weight-bold is-size-1"
             style={{
               //@boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              //backgroundColor: '#f40',
-              color: 'white',
+              //ackgroundColor: 'lightgrey',
+              color: '#D64000',
               padding: '1rem',
             }}
           >
@@ -43,7 +42,8 @@ class Screenshots extends React.Component {
                     alt: `screenshot image thumbnail for  ${post.frontmatter.title}`,
                   }}
                 /> 
-              </Link>      
+              </Link>  
+              <h3 style={{textAlign: 'center', fontSize: '1.5rem'}}>{post.frontmatter.title}</h3>    
             </div>
           ))}
           </div>

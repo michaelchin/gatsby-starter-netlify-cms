@@ -36,17 +36,17 @@ class NewsList extends React.Component {
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
+                    <br></br>
                     <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
+                      <span> &bull; </span>{post.frontmatter.date}
                     </span>
                   </p>
                 </header>
                 <p>
-                  {post.excerpt}
+                  {post.frontmatter.description}
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug}>
+                  <Link className="button is-info" to={post.fields.slug}>
                     Keep Reading →
                   </Link>
                 </p>
@@ -85,10 +85,11 @@ export default () => (
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
+                description
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 120, maxHeight: 70, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }

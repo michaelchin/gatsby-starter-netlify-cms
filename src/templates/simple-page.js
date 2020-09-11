@@ -8,7 +8,7 @@ export const SimplePageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
+    <section className="section section--gradient pg-section" style={{borderTop: 'lightgrey solid 1px'}}>
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -16,7 +16,7 @@ export const SimplePageTemplate = ({ title, content, contentComponent }) => {
               <h2 className="mc-title title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
               </h2>
-              <PageContent className="content" content={content} />
+              <PageContent className="content box" content={content} />
             </div>
           </div>
         </div>

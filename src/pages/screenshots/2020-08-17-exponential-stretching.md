@@ -1,6 +1,6 @@
 ---
 templateKey: 'screenshots'
-title: 'screenshots 1'
+title: 'NAM Strain Rate'
 date: 2020-08-18T15:04:10.000Z
 image: ../../img/NAM_strain_rate.png
 description: >-

@@ -11,9 +11,9 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 import GPlatesMainScreenshot from '../img/SATL_ExponentialStretching_650x380.png'
 import logo from '../img/logo.svg'
-import pygplatesLogo from '../img/pygplates-screenshot.png' 
-import portalScreenshot from '../img/portal-screenshot.png'
-import gwsScreenshot from '../img/gws-screenshot.png'
+import pygplatesLogo from '../img/sunflower.jpg' 
+import portalScreenshot from '../img/sunflower.jpg'
+import gwsScreenshot from '../img/sunflower.jpg'
 import forumScreenshot from '../img/forum-screenshot.png'
 
 export const IndexPageTemplate = ({
@@ -104,10 +104,10 @@ export const IndexPageTemplate = ({
     </div>
 
     <div className="container">
-      <div className="column is-10 is-offset-1">
+      <div className="column is-12 is-offset-0">
              
         <div className="column is-12">
-          <div  style={{backgroundColor: 'whitesmoke',}}>
+          <div className="box" style={{backgroundColor: 'whitesmoke',padding: '0'}}>
             <div className="columns section">
               <div className="column is-7">
                 <div className="tile">
@@ -131,7 +131,7 @@ export const IndexPageTemplate = ({
             
             <div style={{textAlign:'center'}} >
                 <a className="button is-link" href="https://sourceforge.net/projects/gplates/files/gplates/2.2/" >
-                  Learn More...
+                  Learn More
                 </a>
               </div>
               
@@ -155,16 +155,18 @@ export const IndexPageTemplate = ({
         <br></br>
 
         <div className="column is-12">
-          <div style={{backgroundColor: "whitesmoke"}}>  
+          <div className="box" style={{backgroundColor: "whitesmoke", padding: '0'}}>  
           <h3 className="has-text-weight-semibold is-size-3" style={{ textAlign: 'center'}}>
             GPlates Suite
           </h3>
           
           <div className="columns section is-multiline">
 
-            <div className="column is-6" 
+            <div className="column is-4" 
               style={{
-                textAlign:'center'
+                textAlign:'center',
+                position: 'relative',
+                paddingBottom:'70px'
               }}
             >
               <h3 style={{display:'none'}}><a className="mc-a" href="https://www.gplates.org/docs/pygplates/" target="_blank" rel="noreferrer">pyGPlates</a></h3> 
@@ -183,13 +185,17 @@ export const IndexPageTemplate = ({
                 </a>
               </div>
               <br></br>
-              <p style={{textAlign:'left'}}>
-                The GPlates Python library (pyGPlates) enables access to GPlates functionality via the Python programming language. 
-                It allows users to use GPlates in a programmatic way and hence provides much more flexibility than the GPlates desktop interface can offer. 
-              </p>
+              <div style={{textAlign:'left'}}>
+                The <b>GPlates Python library (pyGPlates)</b> enables access to GPlates functionality via the Python programming language. 
+              </div>
+              <div style={{position:'absolute', bottom:'0', left:'0', right:'0'}} >
+                <a className="button is-link" href="https://www.gplates.org/docs/pygplates/" >
+                  Learn More
+                </a>
+              </div>
             </div>
 
-            <div className="column is-6" style={{textAlign:'center'}}>
+            <div className="column is-4" style={{textAlign:'center', position: 'relative', paddingBottom:'70px'}}>
               <h3 style={{display:'none'}}><a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">GPlates Portal</a></h3> 
               <div className="mc-card-container">
                 <img
@@ -207,13 +213,17 @@ export const IndexPageTemplate = ({
                 </a>
               </div>
               <br></br>
-              <p style={{textAlign:'left'}}>
-                The GPlates Web Portal is a gateway to a series of web pages for the interactive visualisation of cutting-edge geoscience datasets, 
-                all possible within freely available web browsers.
-              </p>
+              <div style={{textAlign:'left'}}>
+                The <b>GPlates Web Portal</b> is a gateway to a series of web pages for the interactive visualisation of cutting-edge geoscience datasets.
+              </div>
+              <div style={{position:'absolute', bottom:'0', left:'0', right:'0'}} >
+                <a className="button is-link" href="https://portal.gplates.org/" >
+                  Learn More
+                </a>
+              </div>
             </div>
 
-            <div className="column is-6" style={{textAlign:'center'}}>
+            <div className="column is-4" style={{textAlign:'center', position: 'relative', paddingBottom:'70px'}}>
               <h3 style={{display:'none'}}><a className="mc-a" href="https://gws.gplates.org/" target="_blank" rel="noreferrer">GPlates Web Services</a></h3>
                 <div className="mc-card-container">
                   <img
@@ -231,37 +241,19 @@ export const IndexPageTemplate = ({
                   </a>
               </div> 
               <br></br>
-              <p style={{textAlign:'left'}}>
-                GPlates web service interface allows users to access plate tectonics reconstruction services via Internet. 
-                The interface has been designed to provide paleo-geographic coordinates in a simplest way.
-                The service can be used in any devices which have implemented HTTP protocol and have Internet connection.
-              </p>
-            </div>                  
-            
-            <div className="column is-6" style={{textAlign:'center'}}>
-              <h3 style={{display:'none'}}><a className="mc-a" href="https://discourse.gplates.org/" target="_blank" rel="noreferrer">GPlates Forum</a></h3> 
-                <div className="mc-card-container">
-                  <img
-                    src={forumScreenshot}
-                    alt="GPlates Forum Screenshot"
-                    className="mc-card"
-                    style={{
-                      
-                    }}
-                  />  
-
-                <a className="mc-a" href="https://discourse.gplates.org/" target="_blank" rel="noreferrer">
-                  <div className="mc-card-overlay">
-                    <div className="mc-overlay-text">https://discourse.gplates.org/</div>
-                  </div>
+              <div style={{textAlign:'left'}}>
+                The <b>GPlates Web Service</b> interface allows users to access plate tectonics reconstruction services via Internet. 
+              </div>
+              <div style={{position:'absolute', bottom:'0', left:'0', right:'0'}} >
+                <a className="button is-link" href="https://gws.gplates.org/" >
+                  Learn More
                 </a>
               </div>
-              <br></br>
-              <p style={{textAlign:'left'}}>
-                Welcome to the GPlates Community Forum!
-                This online forum is a place for the users, developers and researchers to discuss GPlates related topics.
-              </p>
-            </div>
+            </div>                  
+            
+
+          
+          
           </div>
         </div>
         </div>
@@ -272,6 +264,7 @@ export const IndexPageTemplate = ({
                   <h3 className="has-text-weight-semibold is-size-3">
                     Latest News
                   </h3>
+                  <br></br>
                   <LatestNews />
                   <div className="column is-12 has-text-centered">
                     <Link className="button is-primary" to="/news">

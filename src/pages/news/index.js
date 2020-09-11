@@ -10,17 +10,17 @@ export default class BlogIndexPage extends React.Component {
         <div
           className="full-width-image-container margin-top-0"
           style={{
-            backgroundImage: `url('/img/background.png')`,
+            backgroundImage: `url('/img/Starry-Night-Van-Gogh-Which-Stars-GoogleArtProject-1024x545.jpg')`,
           }}
         >
           <h1
             className="has-text-weight-bold is-size-1"
             style={{
-              color: 'white',
+              color: '#D64000',
               padding: '1rem',
             }}
           >
-            Latest News
+            News
           </h1>
         </div>
         <section className="section">

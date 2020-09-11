@@ -25,10 +25,10 @@ class LatestNews extends React.Component {
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
+                    </Link><br></br>
+                    
                     <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
+                      <span> &bull; </span>{post.frontmatter.date}
                     </span>
                   </p>
                 </header>
@@ -36,7 +36,7 @@ class LatestNews extends React.Component {
                   {post.frontmatter.description}
                   <br />
                   <br />
-                  <Link className="button" to={post.fields.slug}>
+                  <Link className="button is-success" to={post.fields.slug}>
                     Keep Reading →
                   </Link>
                 </p>

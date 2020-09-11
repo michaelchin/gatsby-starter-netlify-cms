@@ -1,6 +1,6 @@
 ---
 templateKey: 'screenshots'
-title: 'screenshots 1'
+title: 'SATL CrustalStretching'
 date: 2020-08-18T15:04:10.000Z
 image: ../../img/SATL_CrustalStretching_650x380.png
 description: >-
