@@ -11,6 +11,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 import GPlatesMainScreenshot from '../img/SATL_ExponentialStretching_650x380.png'
 import logo from '../img/logo.svg'
+import gIcon from '../img/icon.svg'
 import pygplatesLogo from '../img/sunflower.jpg' 
 import portalScreenshot from '../img/sunflower.jpg'
 import gwsScreenshot from '../img/sunflower.jpg'
@@ -59,8 +60,22 @@ export const IndexPageTemplate = ({
         <img
           src={logo}
           alt="GPlates Logo"
-          style={{ width: '20em', height: '4em', margin: '1em auto' }}
+          style={{ width: '20em', height: '4em', margin: '1em auto', display:'none' }}
         />
+        <h1
+          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+          style={{
+            color: '#48c774',
+            lineHeight: '1',
+            padding: '0.25em',
+          }}
+        >
+          <span style={{fontSize:'150%'}}>
+            <span style={{color:'blue'}}>G</span>P
+            <span style={{color:'orange'}}>l</span><span style={{color:'red'}}>a</span>t
+            <span style={{color:'yellow'}}>e</span>s
+          </span>
+        </h1>
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
@@ -75,10 +90,12 @@ export const IndexPageTemplate = ({
         >
           {subheading}
         </h3>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        <img
+          src={gIcon}
+          alt="GPlates Icon"
+          style={{ width: '7em', margin: '1em auto' }}
+        />
+        
         <br></br>
         <br></br>
         <br></br>
@@ -192,6 +209,7 @@ export const IndexPageTemplate = ({
               <cite> Müller, R. D., Cannon, J., Qin, X., Watson, R. J., Gurnis, M., Williams, S., et al. 2018. 
                 GPlates: Building a virtual Earth through deep time. Geochemistry, Geophysics, Geosystems, 19. doi:10.1029/2018GC007584.
               </cite>
+              <span data-clipboard-text="lalahaha">copy</span>
               </div>
           </article>
         </div>
@@ -201,7 +219,7 @@ export const IndexPageTemplate = ({
         <div className="column is-12">
           <div className="box" style={{backgroundColor: "whitesmoke", padding: '0'}}>  
           <h3 className="has-text-weight-semibold is-size-3" style={{ textAlign: 'center'}}>
-            GPlates Suite
+            GPlates Family
           </h3>
           
           <div className="columns section is-multiline">
@@ -209,67 +227,74 @@ export const IndexPageTemplate = ({
             <div className="column is-4" 
               style={{
                 textAlign:'center',
-                position: 'relative',
-                paddingBottom:'70px'
+                position:'relative', paddingBottom:'70px'
               }}
             >
               <h3 style={{display:'none'}}><a className="mc-a" href="https://www.gplates.org/docs/pygplates/" target="_blank" rel="noreferrer">pyGPlates</a></h3> 
               <div className="mc-card-container">
-                <img
-                  src={pygplatesLogo}
-                  alt="pyGPlates Screenshot"
-                  className="mc-card"
-                  style={{
-                  }}
-                  />
-                <a className="mc-a" href="https://www.gplates.org/docs/pygplates/" target="_blank" rel="noreferrer">
-                  <div className="mc-card-overlay">
-                    <div className="mc-overlay-text">https://www.gplates.org/docs/pygplates/</div>
-                  </div>
-                </a>
+                <div style={{position: 'relative'}}>
+                  <img
+                    src={pygplatesLogo}
+                    alt="pyGPlates Screenshot"
+                    className="mc-card"
+                    style={{
+                    }}
+                    />
+                  <a className="mc-a" href="https://www.gplates.org/docs/pygplates/" target="_blank" rel="noreferrer">
+                    <div className="mc-card-overlay">
+                      <div className="mc-overlay-text">https://www.gplates.org/docs/pygplates/</div>
+                    </div>
+                  </a>
+                </div>
+                <div style={{textAlign:'left'}}>
+                  The <b>GPlates Python library (pyGPlates)</b> enables access to GPlates functionality via the Python programming language. 
+                </div>
+                
               </div>
-              <br></br>
-              <div style={{textAlign:'left'}}>
-                The <b>GPlates Python library (pyGPlates)</b> enables access to GPlates functionality via the Python programming language. 
+              <div style={{position:'absolute', bottom:'7px', left:'0', right:'0'}} >
+                  <a className="button is-link" href="https://www.gplates.org/docs/pygplates/" >
+                    Learn More
+                  </a>
               </div>
-              <div style={{position:'absolute', bottom:'0', left:'0', right:'0'}} >
-                <a className="button is-link" href="https://www.gplates.org/docs/pygplates/" >
-                  Learn More
-                </a>
-              </div>
+              
             </div>
 
-            <div className="column is-4" style={{textAlign:'center', position: 'relative', paddingBottom:'70px'}}>
+            <div className="column is-4" style={{textAlign:'center', position:'relative', paddingBottom:'70px'}}>
               <h3 style={{display:'none'}}><a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">GPlates Portal</a></h3> 
               <div className="mc-card-container">
-                <img
-                  src={portalScreenshot}
-                  alt="GPlates Portal Screenshot"
-                  className="mc-card"
-                  style={{
-                  
-                  }}
-                />  
-                <a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">
-                <div className="mc-card-overlay">
-                  <div className="mc-overlay-text">https://portal.gplates.org/</div>
+                <div style={{position: 'relative'}}>
+                  <img
+                    src={portalScreenshot}
+                    alt="GPlates Portal Screenshot"
+                    className="mc-card"
+                    style={{
+                    
+                    }}
+                  />  
+                  <a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">
+                  <div className="mc-card-overlay">
+                    <div className="mc-overlay-text">https://portal.gplates.org/</div>
+                  </div>
+                  </a>
                 </div>
-                </a>
-              </div>
-              <br></br>
-              <div style={{textAlign:'left'}}>
+                <div style={{textAlign:'left'}}>
                 The <b>GPlates Web Portal</b> is a gateway to a series of web pages for the interactive visualisation of cutting-edge geoscience datasets.
+                </div>
+                
               </div>
-              <div style={{position:'absolute', bottom:'0', left:'0', right:'0'}} >
-                <a className="button is-link" href="https://portal.gplates.org/" >
-                  Learn More
-                </a>
+              <div style={{position:'absolute', bottom:'7px', left:'0', right:'0'}} >
+                  <a className="button is-link" href="https://portal.gplates.org/" >
+                    Learn More
+                  </a>
               </div>
+              
+              
             </div>
 
-            <div className="column is-4" style={{textAlign:'center', position: 'relative', paddingBottom:'70px'}}>
+            <div className="column is-4" style={{textAlign:'center', position:'relative', paddingBottom:'70px'}}>
               <h3 style={{display:'none'}}><a className="mc-a" href="https://gws.gplates.org/" target="_blank" rel="noreferrer">GPlates Web Services</a></h3>
-                <div className="mc-card-container">
+              <div className="mc-card-container">
+                <div style={{position: 'relative'}}>
                   <img
                     src={gwsScreenshot}
                     alt="GPlates Web Service Screenshot"
@@ -283,16 +308,19 @@ export const IndexPageTemplate = ({
                       <div className="mc-overlay-text">https://gws.gplates.org/</div>
                     </div>
                   </a>
+                </div >
+                <div style={{textAlign:'left', }}>
+                  The <b>GPlates Web Service</b> interface allows users to access plate tectonics reconstruction services via Internet. 
+                </div>
+                
               </div> 
-              <br></br>
-              <div style={{textAlign:'left'}}>
-                The <b>GPlates Web Service</b> interface allows users to access plate tectonics reconstruction services via Internet. 
-              </div>
-              <div style={{position:'absolute', bottom:'0', left:'0', right:'0'}} >
+              <div style={{position:'absolute', bottom:'7px', left:'0', right:'0'}} >
                 <a className="button is-link" href="https://gws.gplates.org/" >
-                  Learn More
+                Learn More
                 </a>
               </div>
+              <br></br>
+              
             </div>                  
             
 
