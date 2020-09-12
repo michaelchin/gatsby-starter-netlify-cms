@@ -17,35 +17,29 @@ class Screenshots extends React.Component {
             backgroundImage: `url('/img/Starry-Night-Van-Gogh-Which-Stars-GoogleArtProject-1024x545.jpg')`,
           }}
         >
-          <h2
-            className="has-text-weight-bold is-size-1"
-            style={{
-              //@boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-              //ackgroundColor: 'lightgrey',
-              color: '#D64000',
-              padding: '1rem',
-            }}
-          >
+          <h2 className="has-text-weight-bold is-size-1 gp-title">
             Screenshots
           </h2>
         </div>
 
-        <div className="column is-10 is-offset-1">
-          <div className="columns is-multiline">
-          {posts &&
-            posts.map(({ node: post }) => (
-            <div className="is-parent column is-4" key={post.id} title={post.frontmatter.title}>
-              <Link to={post.fields.slug}>   
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    image: post.frontmatter.image,
-                    alt: `screenshot image thumbnail for  ${post.frontmatter.title}`,
-                  }}
-                /> 
-              </Link>  
-              <h3 style={{textAlign: 'center', fontSize: '1.5rem'}}>{post.frontmatter.title}</h3>    
+        <div className="container">
+          <div className="column is-12 is-offset-0">
+            <div className="columns is-multiline">
+            {posts &&
+              posts.map(({ node: post }) => (
+              <div className="is-parent column is-4" key={post.id} title={post.frontmatter.title}>
+                <Link to={post.fields.slug}>   
+                  <PreviewCompatibleImage
+                    imageInfo={{
+                      image: post.frontmatter.image,
+                      alt: `screenshot image thumbnail for  ${post.frontmatter.title}`,
+                    }}
+                  /> 
+                </Link>  
+                <h3 style={{textAlign: 'center', fontSize: '1.5rem'}}>{post.frontmatter.title}</h3>    
+              </div>
+            ))}
             </div>
-          ))}
           </div>
         </div>
         <br></br>

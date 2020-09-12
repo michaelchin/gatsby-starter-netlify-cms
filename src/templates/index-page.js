@@ -33,13 +33,17 @@ export const IndexPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `center`,
+        backgroundPosition: `left top`,
+        backgroundAttachment: 'fixed',
         textAlign: `center`,
-        minHeight: `500px`,
+        minHeight: `700px`,
+        position: 'relative'
       }}
     >
+    <div className="tint"></div>
       <div
         style={{
+          zIndex: '10',
           display: 'flex',
           width: '100%',
           maxWidth: '1280px',
@@ -61,12 +65,12 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             //display: 'none',
-            color: 'seashell',
+            color: '#fff',
             padding: '0.25em',
             maxWidth: '768px',
             lineHeight: '1.5',
             margin: 'auto',
-            backgroundColor: 'rgba(76, 76, 76, 0.5)',
+            fontFamily: 'Open Sans Bold, sans-serif'
           }}
         >
           {subheading}
@@ -102,6 +106,46 @@ export const IndexPageTemplate = ({
         </p>
       </div>
     </div>
+
+    <div className="container-fliud box" style={{backgroundColor: 'whitesmoke'}}>
+      <div className="container">
+             
+        <div className="column is-12">
+         
+            <div className="columns section">
+              <div className="column is-7">
+                <div className="tile">
+                  <h1 className="mc-title title">{mainpitch.title}</h1>
+                </div>
+                <div className="tile">
+                  <div className="content">
+                    <br></br>
+                    <HTMLContent content={descMarkdown.childMarkdownRemark.html}/>
+                  </div>
+                </div>
+              </div>
+              <div className="column is-5">    
+                <img
+                  src={GPlatesMainScreenshot}
+                  alt="GPlates Screenshot"
+                  style={{  }}
+                /> 
+              </div>
+            </div>
+            
+            <div style={{textAlign:'center'}} >
+                <a className="button is-link" href="https://sourceforge.net/projects/gplates/files/gplates/2.2/" >
+                  Learn More
+                </a>
+              </div>
+              
+            <br></br>
+          
+        </div>
+      </div>
+    </div>
+
+
 
     <div className="container">
       <div className="column is-12 is-offset-0">

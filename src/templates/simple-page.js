@@ -8,14 +8,11 @@ export const SimplePageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient pg-section" style={{borderTop: 'lightgrey solid 1px'}}>
+    <section className="section section--gradient">
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <h2 className="mc-title title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
               <PageContent className="content box" content={content} />
             </div>
           </div>
@@ -36,6 +33,18 @@ const SimplePage = ({ data }) => {
 
   return (
     <Layout>
+      <div
+          className="full-width-image-container margin-top-0"
+          style={{
+            backgroundImage: `url('/img/Starry-Night-Van-Gogh-Which-Stars-GoogleArtProject-1024x545.jpg')`,
+            marginBottom: '0'
+          }}
+        >
+          <h1 className="has-text-weight-bold is-size-1 gp-title">
+            {post.frontmatter.title}
+          </h1>
+      </div>
+
       <SimplePageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
