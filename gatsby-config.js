@@ -29,6 +29,7 @@ module.exports = {
         name: 'images',
       },
     },
+    'react-copy-to-clipboard',
     'gatsby-plugin-fontawesome-css',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

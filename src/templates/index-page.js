@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 import Layout from '../components/Layout'
 //import Features from '../components/Features'
@@ -209,8 +210,13 @@ export const IndexPageTemplate = ({
               <cite> Müller, R. D., Cannon, J., Qin, X., Watson, R. J., Gurnis, M., Williams, S., et al. 2018. 
                 GPlates: Building a virtual Earth through deep time. Geochemistry, Geophysics, Geosystems, 19. doi:10.1029/2018GC007584.
               </cite>
-              <span data-clipboard-text="lalahaha">copy</span>
+              <br></br>
+              <div style={{textAlign:'center'}}>
+                <CopyToClipboard text="Müller, R. D., Cannon, J., Qin, X., Watson, R. J., Gurnis, M., Williams, S., et al. 2018. GPlates: Building a virtual Earth through deep time. Geochemistry, Geophysics, Geosystems, 19. doi:10.1029/2018GC007584.">
+                  <button>Copy the citation to clipboard</button>
+                </CopyToClipboard>
               </div>
+            </div>
           </article>
         </div>
 
