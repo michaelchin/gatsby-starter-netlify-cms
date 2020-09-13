@@ -20,6 +20,7 @@ class Screenshots extends React.Component {
           <h2 className="has-text-weight-bold is-size-1 gp-title">
             Screenshots
           </h2>
+          <div className="tint"></div>
         </div>
 
         <div className="container">
@@ -28,7 +29,7 @@ class Screenshots extends React.Component {
             {posts &&
               posts.map(({ node: post }) => (
               <div className="is-parent column is-3" key={post.id} title={post.frontmatter.title}>
-                <div className="box">
+                <div className="box pg-screenshot-box">
                   <Link to={post.fields.slug}>   
                     <PreviewCompatibleImage
                       imageInfo={{

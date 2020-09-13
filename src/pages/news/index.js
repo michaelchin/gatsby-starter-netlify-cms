@@ -17,6 +17,7 @@ export default class BlogIndexPage extends React.Component {
             className="has-text-weight-bold is-size-1 gp-title">
             News
           </h1>
+          <div className="tint"></div>
         </div>
         <section className="section">
           <div className="container">

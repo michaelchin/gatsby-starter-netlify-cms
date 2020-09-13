@@ -8,7 +8,7 @@ import Layout from '../components/Layout'
 import LatestNews from '../components/LatestNews'
 import Content, { HTMLContent } from '../components/Content'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faDownload, faClipboard } from '@fortawesome/free-solid-svg-icons'
 
 import GPlatesMainScreenshot from '../img/SATL_ExponentialStretching_650x380.png'
 import logo from '../img/logo.svg'
@@ -210,10 +210,11 @@ export const IndexPageTemplate = ({
               <cite> Müller, R. D., Cannon, J., Qin, X., Watson, R. J., Gurnis, M., Williams, S., et al. 2018. 
                 GPlates: Building a virtual Earth through deep time. Geochemistry, Geophysics, Geosystems, 19. doi:10.1029/2018GC007584.
               </cite>
-              <br></br>
+              <br></br><br></br>
               <div style={{textAlign:'center'}}>
                 <CopyToClipboard text="Müller, R. D., Cannon, J., Qin, X., Watson, R. J., Gurnis, M., Williams, S., et al. 2018. GPlates: Building a virtual Earth through deep time. Geochemistry, Geophysics, Geosystems, 19. doi:10.1029/2018GC007584.">
-                  <button>Copy the citation to clipboard</button>
+                  <button className="button is-small is-success"><span className="icon"> <FontAwesomeIcon icon={faClipboard} className="fa-spin" /></span>
+                  <span>Copy the citation to clipboard</span></button>
                 </CopyToClipboard>
               </div>
             </div>
@@ -233,19 +234,18 @@ export const IndexPageTemplate = ({
             <div className="column is-4" 
               style={{
                 textAlign:'center',
-                position:'relative', paddingBottom:'70px'
+                position:'relative', 
+                paddingBottom:'20px'
               }}
             >
               <h3 style={{display:'none'}}><a className="mc-a" href="https://www.gplates.org/docs/pygplates/" target="_blank" rel="noreferrer">pyGPlates</a></h3> 
-              <div className="mc-card-container">
+              <div className="mc-card-container box">
                 <div style={{position: 'relative'}}>
-                  <img
-                    src={pygplatesLogo}
-                    alt="pyGPlates Screenshot"
-                    className="mc-card"
-                    style={{
-                    }}
-                    />
+                  
+                  <div style={{overflow:"hidden"}}>
+                    <img src={pygplatesLogo} alt="pyGPlates Screenshot" />
+                  </div>
+
                   <a className="mc-a" href="https://www.gplates.org/docs/pygplates/" target="_blank" rel="noreferrer">
                     <div className="mc-card-overlay">
                       <div className="mc-overlay-text">https://www.gplates.org/docs/pygplates/</div>
@@ -257,7 +257,7 @@ export const IndexPageTemplate = ({
                 </div>
                 
               </div>
-              <div style={{position:'absolute', bottom:'7px', left:'0', right:'0'}} >
+              <div style={{position:'absolute', bottom:'5px', left:'0', right:'0'}} >
                   <a className="button is-link" href="https://www.gplates.org/docs/pygplates/" >
                     Learn More
                   </a>
@@ -265,18 +265,15 @@ export const IndexPageTemplate = ({
               
             </div>
 
-            <div className="column is-4" style={{textAlign:'center', position:'relative', paddingBottom:'70px'}}>
+            <div className="column is-4" style={{textAlign:'center', position:'relative', paddingBottom:'20px'}}>
               <h3 style={{display:'none'}}><a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">GPlates Portal</a></h3> 
-              <div className="mc-card-container">
+              <div className="mc-card-container box">
                 <div style={{position: 'relative'}}>
-                  <img
-                    src={portalScreenshot}
-                    alt="GPlates Portal Screenshot"
-                    className="mc-card"
-                    style={{
-                    
-                    }}
-                  />  
+
+                  <div style={{overflow:"hidden"}}>
+                    <img src={portalScreenshot} alt="GPlates Portal Screenshot"></img>
+                  </div>
+          
                   <a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">
                   <div className="mc-card-overlay">
                     <div className="mc-overlay-text">https://portal.gplates.org/</div>
@@ -288,7 +285,7 @@ export const IndexPageTemplate = ({
                 </div>
                 
               </div>
-              <div style={{position:'absolute', bottom:'7px', left:'0', right:'0'}} >
+              <div style={{position:'absolute', bottom:'5px', left:'0', right:'0'}} >
                   <a className="button is-link" href="https://portal.gplates.org/" >
                     Learn More
                   </a>
@@ -297,18 +294,15 @@ export const IndexPageTemplate = ({
               
             </div>
 
-            <div className="column is-4" style={{textAlign:'center', position:'relative', paddingBottom:'70px'}}>
+            <div className="column is-4" style={{textAlign:'center', position:'relative', paddingBottom:'20px'}}>
               <h3 style={{display:'none'}}><a className="mc-a" href="https://gws.gplates.org/" target="_blank" rel="noreferrer">GPlates Web Services</a></h3>
-              <div className="mc-card-container">
+              <div className="mc-card-container box">
                 <div style={{position: 'relative'}}>
-                  <img
-                    src={gwsScreenshot}
-                    alt="GPlates Web Service Screenshot"
-                    className="mc-card"
-                    style={{
-                      
-                    }}
-                  /> 
+
+                  <div style={{overflow:"hidden"}}>
+                    <img src={gwsScreenshot} alt="GPlates Web Service Screenshot"/>
+                  </div> 
+
                   <a className="mc-a" href="https://gws.gplates.org/" target="_blank" rel="noreferrer">
                     <div className="mc-card-overlay">
                       <div className="mc-overlay-text">https://gws.gplates.org/</div>
@@ -320,7 +314,7 @@ export const IndexPageTemplate = ({
                 </div>
                 
               </div> 
-              <div style={{position:'absolute', bottom:'7px', left:'0', right:'0'}} >
+              <div style={{position:'absolute', bottom:'5px', left:'0', right:'0'}} >
                 <a className="button is-link" href="https://gws.gplates.org/" >
                 Learn More
                 </a>

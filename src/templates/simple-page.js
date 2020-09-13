@@ -43,6 +43,7 @@ const SimplePage = ({ data }) => {
           <h1 className="has-text-weight-bold is-size-1 gp-title">
             {post.frontmatter.title}
           </h1>
+          <div className="tint"></div>
       </div>
 
       <SimplePageTemplate
