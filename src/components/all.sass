@@ -241,31 +241,53 @@ body
   position: absolute
   top: 0px
   left: 0px
-  background: rgba(100, 100, 100, 0.5) 
+  background: rgba(100, 100, 200, 1)
   -webkit-animation: glow linear 30s infinite
   animation: glow linear 30s infinite
   @-webkit-keyframes glow  
     0%
-      background: rgba(100, 100, 100, 0.5)
-    25%
       background: rgba(100, 100, 200, 1)
-    50%
-      background: rgba(100, 100, 100, 0)
-    75%
-      background: rgba(200, 100, 100, 1) 
+    20%
+      background: rgba(100, 100, 100, 0.7)
+    40%
+      background: rgba(0, 0, 0, 1)
+    60%
+      background: rgba(0, 0, 0, 0.7) 
+    80%
+      background: rgba(200, 100, 100, 1)
+    90%
+      background: rgba(200, 100, 100, 0.7)
     100%  
-      background: rgba(100, 100, 100, 0.5) 
+      background: rgba(100, 100, 200, 1)
   @keyframes glow
     0%
-      background: rgba(100, 100, 100, 0.5)
-    25%
       background: rgba(100, 100, 200, 1)
-    50%
-      background: rgba(100, 100, 100, 0)
-    75%
-      background: rgba(200, 100, 100, 1) 
+    20%
+      background: rgba(100, 100, 100, 0.7)
+    40%
+      background: rgba(0, 0, 0, 1)
+    60%
+      background: rgba(0, 0, 0, 0.7) 
+    80%
+      background: rgba(200, 100, 100, 1)
+    90%
+      background: rgba(200, 100, 100, 0.7)
     100%  
-      background: rgba(100, 100, 100, 0.5) 
+      background: rgba(100, 100, 200, 1)
 
+.gp-download-btn:hover, .gp-middle-icon:hover
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+  transform: translate3d(0, 0, 0)
+  backface-visibility: hidden
+  perspective: 1000px
 
+  @keyframes shake 
+    10%, 90% 
+      transform: translate3d(-1px, 0, 0)
+    20%, 80% 
+      transform: translate3d(2px, 0, 0)
+    30%, 50%, 70%
+      transform: translate3d(-4px, 0, 0)
+    40%, 60% 
+      transform: translate3d(4px, 0, 0)
   

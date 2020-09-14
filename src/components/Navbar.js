@@ -69,27 +69,27 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/features">
                 Features
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className="navbar-item" to="/download">
                 Download
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Data
+              <Link className="navbar-item" to="/docs">
+                Docs
               </Link>
-              <Link className="navbar-item" to="/products">
-                User Docs
-              </Link>
-              <Link className="navbar-item" to="/blog">
+              <Link className="navbar-item" to="/publications">
                 Publications
               </Link>
-              <Link className="navbar-item" to="/contact">
+              <Link className="navbar-item" to="/gpml">
                 GPML
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
+              <Link className="navbar-item" to="/auscope">
                 AuScope
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Contact Us
+              <Link className="navbar-item" to="/contact">
+                Contact
               </Link>
+              <a className="navbar-item" href="https://discourse.gplates.org/" target="_blank">
+                Forum
+              </a>
             </div>
             <div className="navbar-end has-text-centered">
               <a
