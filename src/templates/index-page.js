@@ -43,6 +43,9 @@ export const IndexPageTemplate = ({
         position: 'relative'
       }}
     >
+    <div className="gp-hidden-ctl" style={{position: 'absolute', top:'0', height:'0', width:'0', zIndex:'100', 
+      borderLeft: '5px solid transparent', borderRight: '5px solid transparent', borderTop: '5px solid white'}}>
+    </div>
     <div className="tint"></div>
       <div
         style={{
