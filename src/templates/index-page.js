@@ -31,7 +31,7 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <div 
-      className="full-width-image margin-top-0"
+      className="full-width-image margin-top-0 gp-header"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -73,7 +73,7 @@ export const IndexPageTemplate = ({
           }}
         >
           <span style={{fontSize:'150%'}}>
-            <span style={{color:'blue'}}>G</span>P
+            <span className="gp-g-letter" style={{color:'blue'}}>G</span>P
             <span style={{color:'orange'}}>l</span><span style={{color:'red'}}>a</span>t
             <span style={{color:'yellow'}}>e</span>s
           </span>
@@ -98,33 +98,31 @@ export const IndexPageTemplate = ({
           style={{ width: '7em', margin: '1em auto' }}
         />
         
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
 
-        <p>
+        <div style={{marginBottom: '2rem'}}>
           <a href="https://sourceforge.net/projects/gplates/files/gplates/2.2/"
              style={{
                 color: '#fff',
                 textDecoration: 'underline',
                 fontStyle: 'italic',
-                fontSize: 'large',
+                fontSize: 'large'
              }}
           >
             Latest release v2.2
           </a>
-          <br></br>
-        </p>
-        <br></br><br></br>
-        <p>
+          
+        </div>
+       
+        <div>
           <a className="button is-success is-rounded gp-download-btn" href="https://sourceforge.net/projects/gplates/files/gplates/2.2/">
            <span className="icon"> <FontAwesomeIcon icon={faDownload} /></span> <span>Download Now</span>
           </a>
           
-        </p>
+        </div>
       </div>
     </div>
+
+    <h1 className="mc-title title">What is GPlates?</h1>
 
     {/*start of the first section*/}
     <div className="container-fliud box" style={{backgroundColor: 'whitesmoke'}}>
@@ -200,21 +198,28 @@ export const IndexPageTemplate = ({
                       <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
                         <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
                       </span>
-                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Great research community</span>
+                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Fast and reliable</span>
                     </p>
 
                     <p className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
                       <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
                         <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
                       </span>
-                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Professional development team</span>
+                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Renowned researchers and scientists </span>
                     </p>
 
                     <p className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
                       <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
                         <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
                       </span>
-                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Say something</span>
+                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Professional software development team</span>
+                    </p>
+
+                    <p className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+                      <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
+                        <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
+                      </span>
+                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Proudly made in Australia with great help from EU and USA</span>
                     </p>
 
                   </div>
@@ -282,7 +287,7 @@ export const IndexPageTemplate = ({
                         </div>
                       </a>
                     </div>
-                    <div style={{textAlign:'left'}}>
+                    <div style={{textAlign:'left', flex:'1'}}>
                       The <b>GPlates Python library (pyGPlates)</b> enables access to GPlates functionality via the Python programming language. 
                     </div>
                     <div style={{}} >
@@ -311,7 +316,7 @@ export const IndexPageTemplate = ({
                         </div>
                       </a>
                     </div>
-                    <div style={{textAlign:'left'}}>
+                    <div style={{textAlign:'left',flex:'1'}}>
                       The <b>GPlates Web Portal</b> is a gateway to a series of web pages for the interactive visualisation of cutting-edge geoscience datasets.
                     </div>
                     <div style={{}} >
@@ -340,7 +345,7 @@ export const IndexPageTemplate = ({
                         </div>
                       </a>
                     </div >
-                    <div style={{textAlign:'left', }}>
+                    <div style={{textAlign:'left', flex:'1'}}>
                       The <b>GPlates Web Service</b> interface allows users to access plate tectonics reconstruction services via Internet. 
                     </div>
                     <div style={{}} >

@@ -5,22 +5,6 @@ title: Features of GPlates
 ---
 ### What is GPlates?
 
-<hr class="mc-hr"/>
-
-<!-- VIDEO -->
-<div style="float: right;">
-    <object width="480" height="385">
-    <param name="movie" value="//www.youtube.com/v/mMnziH1RBlg?fs=1&amp;hl=en_US"></param>
-    <param name="allowFullScreen" value="true"></param>
-    <param name="allowscriptaccess" value="always"></param>
-    <embed src="//www.youtube.com/v/mMnziH1RBlg?fs=1&amp;hl=en_US"
-        type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true"
-        width="480" height="385">
-    </embed>
-    </object>
-</div>
-
-
 GPlates is desktop software for the interactive visualisation of plate-tectonics.
 
 GPlates offers a novel combination of interactive plate-tectonic reconstructions, geographic information system (GIS) functionality and raster data visualisation. GPlates enables both the visualisation and the manipulation of plate-tectonic reconstructions and associated data through geological time. GPlates runs on Windows, Linux and MacOS X.
