@@ -125,7 +125,7 @@ export const IndexPageTemplate = ({
       </div>
     </div>
 
-    <h1 className="mc-title title">What is GPlates?</h1>
+    <h1 className="mc-title title">{mainpitch.title}</h1>
 
     {/*start of the first section*/}
     <div className="container-fliud box" style={{backgroundColor: 'whitesmoke'}}>
@@ -134,18 +134,17 @@ export const IndexPageTemplate = ({
          
             <div className="columns section">
               <div className="column is-7">
-                <div className="tile">
+                {/*<div className="tile">
                   <h1 className="mc-title title">{mainpitch.title}</h1>
-                </div>
+            </div>*/}
                 <div className="tile">
-                  <div className="content">
-                    <br></br>
-                    <HTMLContent content={descMarkdown.childMarkdownRemark.html}/>
+                  <div className="content" style={{fontSize: 'large'}}>
+                      <HTMLContent content={descMarkdown.childMarkdownRemark.html}/>
                   </div>
                 </div>
                 <br></br>
                 <div style={{textAlign:'center'}} >
-                  <a className="button is-link is-small" href="https://sourceforge.net/projects/gplates/files/gplates/2.2/" >
+                  <a className="button is-link is-small" href="/features" >
                     Learn More
                   </a>
                 </div>
@@ -181,48 +180,48 @@ export const IndexPageTemplate = ({
                   <h1 className="mc-title title">Why GPlates?</h1>
                 </div>
                 <div className="tile">
-                  <div className="content">
+                  <div className="content" style={{fontSize:"larger"}}>
                     <br></br>
-                    <p className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+                    <p>
                       <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
                         <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
                       </span>
                       <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Open source and free</span>
                     </p>
 
-                    <p className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+                    <p>
                       <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
                         <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
                       </span>
                       <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Easy to use</span>
                     </p>
 
-                    <p className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+                    <p>
                       <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
                         <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
                       </span>
                       <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Fast and reliable</span>
                     </p>
 
-                    <p className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+                    <p>
                       <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
                         <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
                       </span>
                       <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Renowned researchers and scientists </span>
                     </p>
 
-                    <p className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+                    <p>
                       <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
                         <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
                       </span>
-                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Professional software development team</span>
+                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Professional software dev team</span>
                     </p>
 
-                    <p className="is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+                    <p>
                       <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
                         <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
                       </span>
-                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Proudly made in Australia with great help from EU and USA</span>
+                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Proudly made in Australia in cooperation with EU and USA</span>
                     </p>
 
                   </div>
