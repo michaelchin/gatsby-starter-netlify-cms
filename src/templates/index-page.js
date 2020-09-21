@@ -47,83 +47,88 @@ export const IndexPageTemplate = ({
       borderLeft: '5px solid transparent', borderRight: '5px solid transparent', borderTop: '5px solid white'}}>
     </div>
     <div className="tint"></div>
-      <div
-        style={{
-          zIndex: '10',
-          display: 'flex',
-          width: '100%',
-          maxWidth: '1280px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-          paddingLeft: '1em',
-          paddingRight: '1em',
-          paddingBottom: '2em',
-        }}
-      >
-        <img
-          src={logo}
-          alt="GPlates Logo"
-          style={{ width: '20em', height: '4em', margin: '1em auto', display:'none' }}
-        />
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            color: '#48c774',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          <span style={{fontSize:'150%'}}>
-            <span className="gp-g-letter" style={{color:'blue'}}>G</span>P
-            <span style={{color:'orange'}}>l</span><span style={{color:'red'}}>a</span>t
-            <span style={{color:'yellow'}}>e</span>s
-          </span>
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            //display: 'none',
-            color: '#fff',
-            padding: '0.25em',
-            maxWidth: '768px',
-            lineHeight: '1.5',
-            margin: 'auto',
-            fontFamily: 'Open Sans Bold, sans-serif'
-          }}
-        >
-          {subheading}
-        </h3>
-        <img className="gp-middle-icon"
-          src={gIcon}
-          alt="GPlates Icon"
-          style={{ width: '7em', margin: '1em auto' }}
-        />
-        
-
-        <div style={{marginBottom: '2rem'}}>
-          <a href="https://sourceforge.net/projects/gplates/files/gplates/2.2/"
-             style={{
-                color: '#fff',
-                textDecoration: 'underline',
-                fontStyle: 'italic',
-                fontSize: 'large'
-             }}
+    <div className="container gp-header-info" style={{zIndex:'10'}}>
+       <div className="columns section">
+          <div className="column is-7"
+            style={{
+              lineHeight: '1',
+              justifyContent: 'space-around',
+              alignItems: 'left',
+              paddingLeft: '1em',
+              paddingRight: '1em',
+              paddingBottom: '2em',
+            }}
           >
-            Latest release v2.2
-          </a>
+
+            <h1
+              className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+              style={{
+                color: '#48c774',
+                lineHeight: '1',
+                padding: '0.25em',
+              }}
+            >
+
+              <span style={{fontSize:'150%'}}>
+                <span className="gp-g-letter" style={{color:'blue'}}>G</span>P
+                <span style={{color:'orange'}}>l</span><span style={{color:'red'}}>a</span>t
+                <span style={{color:'yellow'}}>e</span>s
+              </span>
+            </h1>
+            <h3
+              className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+              style={{
+                //display: 'none',
+                color: '#fff',
+                padding: '0.25em',
+                maxWidth: '768px',
+                lineHeight: '1.5',
+                margin: 'auto',
+                fontFamily: 'Open Sans Bold, sans-serif'
+              }}
+            >
+              {subheading}
+            </h3>
+            <img className="gp-middle-icon"
+              src={gIcon}
+              alt="GPlates Icon"
+              style={{ width: '7em', margin: '1em auto' }}
+            />
+            
+
+            <div style={{marginBottom: '2rem'}}>
+              <a href="https://sourceforge.net/projects/gplates/files/gplates/2.2/"
+                style={{
+                    color: '#fff',
+                    textDecoration: 'underline',
+                    fontStyle: 'italic',
+                    fontSize: 'large'
+                }}
+              >
+                Latest release v2.2
+              </a>
+              
+            </div>
           
-        </div>
-       
-        <div>
-          <a className="button is-success is-rounded gp-download-btn" href="https://sourceforge.net/projects/gplates/files/gplates/2.2/">
-           <span className="icon"> <FontAwesomeIcon icon={faDownload} /></span> <span>Download Now</span>
-          </a>
-          
-        </div>
+            <div>
+              <a className="button is-success is-rounded gp-download-btn" href="https://sourceforge.net/projects/gplates/files/gplates/2.2/">
+              <span className="icon"> <FontAwesomeIcon icon={faDownload} /></span> <span>Download Now</span>
+              </a>
+            </div>
+          </div>
+          <div className="column is-5" style={{  }}>
+            <div style={{ maxWidth:'600px',margin:'auto' }}>
+              <img
+                  src={WhyGPlatesImage}
+                  alt=""
+                  style={{  }}
+              />
+            </div>
+          </div>
       </div>
     </div>
+    </div>
+    {/*end of the header */}
 
     <h1 className="mc-title title">{mainpitch.title}</h1>
 
@@ -169,18 +174,21 @@ export const IndexPageTemplate = ({
          
             <div className="columns section">
               <div className="column is-5">    
-                <img
-                  src={WhyGPlatesImage}
-                  alt="Why GPlates Image"
-                  style={{  }}
-                /> 
+                <div style={{position: 'relative', paddingBottom: '75%'}}>
+                  <iframe style={{
+                    position: 'absolute',left:'0px', top:'0px'
+                    }}
+                    width="100%" height="100%" src="https://www.youtube.com/embed/og9Cdz9ifX4?autoplay=1&;mute=1&;loop=1&;rel=0&;showinfo=0&color=white&iv_load_policy=3&playlist=og9Cdz9ifX4" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                </div>
               </div>
               <div className="column is-7">
                 <div className="tile">
-                  <h1 className="mc-title title">Why GPlates?</h1>
+                  <h1 className="mc-title title" style={{margin:"auto"}}>Why GPlates?</h1>
                 </div>
                 <div className="tile">
-                  <div className="content" style={{fontSize:"larger"}}>
+                  <div className="content" style={{fontSize:"larger", margin:'auto'}}>
                     <br></br>
                     <p>
                       <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 

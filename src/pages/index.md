@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: GPlates
-image: /img/2008_age_of_oceans_p1024.jpg
+image: ../img/topo_1200x600.png
 heading: GPlates
 subheading: GPlates offers a novel combination of interactive plate-tectonic reconstructions, geographic information system (GIS) functionality and raster data visualisation.
 mainpitch:

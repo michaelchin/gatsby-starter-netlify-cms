@@ -295,3 +295,14 @@ body
   bottom: 100%
   height: 0
   //cursor: pointer
+
+.gp-header-info
+  opacity: 1
+  -webkit-transition: opacity 5.5s ease-in-out;
+  -moz-transition: opacity 5.5s ease-in-out;
+  -ms-transition: opacity 5.5s ease-in-out;
+  -o-transition: opacity 5.5s ease-in-out;
+
+.gp-hidden-ctl:hover ~ .gp-header-info
+  opacity: 0
+  
