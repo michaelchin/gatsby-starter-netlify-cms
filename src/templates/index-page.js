@@ -14,10 +14,12 @@ import GPlatesMainScreenshot from '../img/SATL_ExponentialStretching_650x380.png
 import WhyGPlatesImage from '../img/why-gplates-image.png'
 import logo from '../img/logo.svg'
 import gIcon from '../img/icon.svg'
-import pygplatesLogo from '../img/sunflower.jpg' 
-import portalScreenshot from '../img/sunflower.jpg'
-import gwsScreenshot from '../img/sunflower.jpg'
-import forumScreenshot from '../img/forum-screenshot.png'
+import pygplatesLogo from '../img/pygplates-screenshot.png' 
+import portalScreenshot from '../img/portal-screenshot.png'
+import gwsScreenshot from '../img/gws-screenshot.png'
+
+import auscopeLogo from '../img/Auscope_log_simulation_modelling.png'
+import peoplePhoto from '../img/earthbyte_group_June2016.jpg'
 
 export const IndexPageTemplate = ({
   image,
@@ -178,8 +180,8 @@ export const IndexPageTemplate = ({
                   <iframe style={{
                     position: 'absolute',left:'0px', top:'0px'
                     }}
-                    width="100%" height="100%" src="https://www.youtube.com/embed/og9Cdz9ifX4?autoplay=1&;mute=1&;loop=1&;rel=0&;showinfo=0&color=white&iv_load_policy=3&playlist=og9Cdz9ifX4" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    width="100%" height="100%" src="https://www.youtube.com/embed/og9Cdz9ifX4?autoplay=1&;mute=1&;loop=1&;rel=0&;showinfo=0&color=white&iv_load_policy=3&playlist=og9Cdz9ifX4" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
                 </iframe>
                 </div>
               </div>
@@ -277,94 +279,71 @@ export const IndexPageTemplate = ({
               <div className="columns section is-multiline">
 
                 {/*start of pygplates section*/}
-                <div className="column is-4" 
-                  style={{
-                    textAlign:'center',
-                    position:'relative'
-                  }}
-                >
-                  <h3 style={{display:'none'}}><a className="mc-a" href="https://www.gplates.org/docs/pygplates/" target="_blank" rel="noreferrer">pyGPlates</a></h3> 
-                  <div className="mc-card-container box">
-                    <div style={{position: 'relative'}}>
-                      
-                      <div style={{overflow:"hidden"}}>
-                        <img src={pygplatesLogo} alt="pyGPlates Screenshot" />
-                      </div>
+                <div className="column is-4 gp-card">
+                  <div className="gp-card-container">  
+                    <div className="gp-card-front">
+                      <img src={pygplatesLogo} alt="pyGPlates Screenshot" />
+                    </div>
 
-                      <a className="mc-a" href="https://www.gplates.org/docs/pygplates/" target="_blank" rel="noreferrer">
-                        <div className="mc-card-overlay">
-                          <div className="mc-overlay-text">https://www.gplates.org/docs/pygplates/</div>
-                        </div>
-                      </a>
-                    </div>
-                    <div style={{textAlign:'left', flex:'1'}}>
-                      The <b>GPlates Python library (pyGPlates)</b> enables access to GPlates functionality via the Python programming language. 
-                    </div>
-                    <div style={{}} >
+                    <div className="gp-card-back">
+                      <div style={{textAlign:'center', flex:'1', display:'flex', alignItems: 'center'}}>
+                        <div>The <b>GPlates Python library (pyGPlates)</b> enables access to GPlates functionality via the Python programming language. </div>
+                      </div>
+                      <div style={{}} >
                       <br></br>
-                      <a className="button is-link is-small" href="https://www.gplates.org/docs/pygplates/" >
-                        Learn More
-                      </a>
-                    </div>
+                        <a className="button is-link is-small" href="https://www.gplates.org/docs/pygplates/" >
+                          Learn More
+                        </a>
+                      </div>
+                    </div> 
                   </div>
+                  <h3 className="has-text-weight-semibold is-size-4" style={{ marginTop: '10px', color:'grey'}}>pyGPlates</h3>
                 </div>
                 {/*end of pygplates section*/}
 
                 {/*start of portal section*/}
-                <div className="column is-4" style={{textAlign:'center', position:'relative'}}>
-                  <h3 style={{display:'none'}}><a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">GPlates Portal</a></h3> 
-                  <div className="mc-card-container box">
-                    <div style={{position: 'relative'}}>
-
-                      <div style={{overflow:"hidden"}}>
-                        <img src={portalScreenshot} alt="GPlates Portal Screenshot"></img>
-                      </div>
+                <div className="column is-4 gp-card">
+                  <div className="gp-card-container">  
+                    <div className="gp-card-front">
+                      <img src={portalScreenshot} alt="GPlates Portal Screenshot"></img>
+                    </div>
           
-                      <a className="mc-a" href="https://portal.gplates.org/" target="_blank" rel="noreferrer">
-                        <div className="mc-card-overlay">
-                          <div className="mc-overlay-text">https://portal.gplates.org/</div>
-                        </div>
-                      </a>
+                    <div className="gp-card-back" style={{backgroundColor:'#5c7f71'}}>
+                      <div style={{textAlign:'center', flex:'1', display:'flex', alignItems: 'center'}}>
+                        <div>The <b>GPlates Web Portal</b> is a gateway to a series of web pages for the interactive visualisation of cutting-edge geoscience datasets.</div>
+                      </div>
+                      <div style={{}} >
+                        <br></br>
+                        <a className="button is-link is-small" href="https://portal.gplates.org/" >
+                          Learn More
+                        </a>
+                      </div>  
                     </div>
-                    <div style={{textAlign:'left',flex:'1'}}>
-                      The <b>GPlates Web Portal</b> is a gateway to a series of web pages for the interactive visualisation of cutting-edge geoscience datasets.
-                    </div>
-                    <div style={{}} >
-                      <br></br>
-                      <a className="button is-link is-small" href="https://portal.gplates.org/" >
-                        Learn More
-                      </a>
-                    </div>  
                   </div>
+                  <h3 className="has-text-weight-semibold is-size-4" style={{ marginTop: '10px', color:'grey'}}>GPlates Web Portal</h3>
                 </div>
                 {/*end of portal section*/}
 
                 {/* start of gws card */}
-                <div className="column is-4" style={{textAlign:'center', position:'relative'}}>
-                  <h3 style={{display:'none'}}><a className="mc-a" href="https://gws.gplates.org/" target="_blank" rel="noreferrer">GPlates Web Services</a></h3>
-                  <div className="mc-card-container box">
-                    <div style={{position: 'relative'}}>
+                <div className="column is-4 gp-card">
+                  <div className="gp-card-container">  
+                    <div className="gp-card-front">
+                      <img src={gwsScreenshot} alt="GPlates Web Service Screenshot"/>
+                    </div> 
 
-                      <div style={{overflow:"hidden"}}>
-                        <img src={gwsScreenshot} alt="GPlates Web Service Screenshot"/>
-                      </div> 
-
-                      <a className="mc-a" href="https://gws.gplates.org/" target="_blank" rel="noreferrer">
-                        <div className="mc-card-overlay">
-                          <div className="mc-overlay-text">https://gws.gplates.org/</div>
-                        </div>
-                      </a>
-                    </div >
-                    <div style={{textAlign:'left', flex:'1'}}>
-                      The <b>GPlates Web Service</b> interface allows users to access plate tectonics reconstruction services via Internet. 
-                    </div>
-                    <div style={{}} >
-                      <br></br>
-                      <a className="button is-link is-small" href="https://gws.gplates.org/" >
-                        Learn More
-                      </a>
+                    <div className="gp-card-back" style={{backgroundColor:'#c6632c'}}>
+                      <div style={{textAlign:'center', flex:'1', display:'flex', alignItems: 'center'}}>
+                        <div>The <b>GPlates Web Service</b> interface allows users to access plate tectonics reconstruction services via Internet. </div>
+                      </div>
+                      <div style={{}} >
+                        <br></br>
+                        <a className="button is-link is-small" href="https://gws.gplates.org/" >
+                          Learn More
+                        </a>
+                      </div>
                     </div>
                   </div> 
+                  <h3 className="has-text-weight-semibold is-size-4" style={{ marginTop: '10px', color:'grey'}}>GPlates Web Service</h3>
                 </div> 
                 {/* end of gws card */}
 
@@ -376,11 +355,42 @@ export const IndexPageTemplate = ({
     </div>
     {/* end of gplates family section */}
 
+    <div className="container-fliud box" style={{backgroundColor: 'gainsboro'}}>
+      <div className="container">     
+        <div className="column is-12">
+          <div className="columns section is-multiline">
+            <div className="column is-6" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+              <h3 className="has-text-weight-semibold is-size-3">Who are we?</h3>
+              <div style={{flex:'1'}}>
+                <a href="https://www.earthbyte.org/people/" target="_blank">
+                  <img
+                    src={peoplePhoto}
+                    alt="People Photo"    
+                  />
+                  </a>
+              </div>
+            </div>
+            <div className="column is-6" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+              <h3 className="has-text-weight-semibold is-size-3">Funded by AuScope</h3>
+              <div style={{flex:'1', display: 'flex', flexDirection: 'column'}}>
+                <a href="/auscope" target="_blank" style={{margin:'auto'}}>
+                  <img  
+                    src={auscopeLogo}
+                    alt="AuScope Logo"    
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     {/* start of latest news section */}   
     <div className="container">
       <div className="column is-12 is-offset-0">
         <div className="column is-12">
-          <hr></hr>
+          
           <h3 className="has-text-weight-semibold is-size-3">
             Latest News
           </h3>
