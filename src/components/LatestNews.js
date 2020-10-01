@@ -12,33 +12,45 @@ class LatestNews extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.slice(0,5).map(({ node: post }) => (
-            <div className="is-parent column is-12" key={post.id}>
+            <div className="is-parent column is-6" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
                 <header>
-                  <p className="post-meta">
+                  {post.frontmatter.featuredimage ? (
+                    <div className="featured-thumbnail">
+                      <PreviewCompatibleImage
+                        imageInfo={{
+                          image: post.frontmatter.featuredimage,
+                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                        }}
+                      />
+                    </div>
+                  ) : null}
+                  <div className="post-meta" style={{width:'100%'}}>
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="title has-text-primary is-size-5"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link><br></br>
                     
-                    <span className="subtitle is-size-5 is-block">
+                    <span className="subtitle is-size-5 is-block has-text-weight-bold">
                       <span> &bull; </span>{post.frontmatter.date}
                     </span>
-                  </p>
+                    
+                    <span>
+                      {post.frontmatter.description}
+                    </span>
+                  </div>
                 </header>
                 <p>
-                  {post.frontmatter.description}
-                  <br />
-                  <br />
-                  <Link className="button is-success" to={post.fields.slug}>
+                 
+                  {/*<Link className="button is-success" to={post.fields.slug}>
                     Keep Reading →
-                  </Link>
+                      </Link>*/}
                 </p>
               </article>
             </div>
@@ -79,7 +91,7 @@ export default () => (
                 description
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 120, maxHeight:60, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }

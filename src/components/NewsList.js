@@ -21,35 +21,32 @@ class NewsList extends React.Component {
                 <header>
                   {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
+                      <Link to={post.fields.slug}>   
+                        <PreviewCompatibleImage
+                          imageInfo={{
+                            image: post.frontmatter.featuredimage,
+                            alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                          }}
+                        />
+                      </Link>
                     </div>
                   ) : null}
-                  <p className="post-meta">
+                  <div className="post-meta" style={{width:'100%'}}>
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="title has-text-primary is-size-5"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
                     <br></br>
-                    <span className="subtitle is-size-5 is-block">
+                    <span className="subtitle is-size-5 is-block has-text-weight-bold">
                       <span> &bull; </span>{post.frontmatter.date}
                     </span>
-                  </p>
+                    <span>
+                      {post.frontmatter.description}
+                    </span>
+                  </div>
                 </header>
-                <p>
-                  {post.frontmatter.description}
-                  <br />
-                  <br />
-                  <Link className="button is-info" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
               </article>
             </div>
           ))}

@@ -27,7 +27,7 @@ export const NewsTemplate = ({
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
-            {tags && tags.length ? (
+            {/*tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
@@ -38,7 +38,10 @@ export const NewsTemplate = ({
                   ))}
                 </ul>
               </div>
-            ) : null}
+                  ) : null*/}
+            <br></br>
+            <br></br>
+            <br></br>
           </div>
         </div>
       </div>
