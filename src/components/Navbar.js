@@ -46,9 +46,12 @@ const Navbar = class extends React.Component {
             </Link>
             {/* Hamburger menu */}
             <div
+              role = "button"
+              tabindex="0"
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
+              onKeyDown={() => this.toggleHamburger()}
             >
               <span />
               <span />
@@ -87,7 +90,7 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/contact">
                 Contact
               </Link>
-              <a className="navbar-item" href="https://discourse.gplates.org/" target="_blank">
+              <a className="navbar-item" href="https://discourse.gplates.org/" target="_blank" rel="noreferrer">
                 Forum
               </a>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import {Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
 
 class Screenshots extends React.Component {

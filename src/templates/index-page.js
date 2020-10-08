@@ -4,15 +4,13 @@ import { Link, graphql } from 'gatsby'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 import Layout from '../components/Layout'
-//import Features from '../components/Features'
 import LatestNews from '../components/LatestNews'
-import Content, { HTMLContent } from '../components/Content'
+import { HTMLContent } from '../components/Content'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload, faClipboard, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 import GPlatesMainScreenshot from '../img/SATL_ExponentialStretching_650x380.png'
 import WhyGPlatesImage from '../img/why-gplates-image.png'
-import logo from '../img/logo.svg'
 import gIcon from '../img/icon.svg'
 import pygplatesLogo from '../img/pygplates-screenshot.png' 
 import portalScreenshot from '../img/portal-screenshot.png'
@@ -180,7 +178,7 @@ export const IndexPageTemplate = ({
                   <iframe style={{
                     position: 'absolute',left:'0px', top:'0px'
                     }}
-                    width="100%" height="100%" src="https://www.youtube.com/embed/og9Cdz9ifX4?autoplay=1&;mute=1&;loop=1&;rel=0&;showinfo=0&color=white&iv_load_policy=3&playlist=og9Cdz9ifX4" frameBorder="0"
+                    title="Youtube Video" width="100%" height="100%" src="https://www.youtube.com/embed/og9Cdz9ifX4?autoplay=1&;mute=1&;loop=1&;rel=0&;showinfo=0&color=white&iv_load_policy=3&playlist=og9Cdz9ifX4" frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
                 </iframe>
                 </div>
@@ -362,10 +360,10 @@ export const IndexPageTemplate = ({
             <div className="column is-6" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
               <h3 className="has-text-weight-semibold is-size-3">Who are we?</h3>
               <div style={{flex:'1'}}>
-                <a href="https://www.earthbyte.org/people/" target="_blank">
+                <a href="https://www.earthbyte.org/people/" target="_blank" rel="noreferrer">
                   <img
                     src={peoplePhoto}
-                    alt="People Photo"    
+                    alt="EarthByte People"    
                   />
                   </a>
               </div>
@@ -373,7 +371,7 @@ export const IndexPageTemplate = ({
             <div className="column is-6" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
               <h3 className="has-text-weight-semibold is-size-3">Funded by AuScope</h3>
               <div style={{flex:'1', display: 'flex', flexDirection: 'column'}}>
-                <a href="/auscope" target="_blank" style={{margin:'auto'}}>
+                <a href="/auscope" target="_blank" rel="noreferrer" style={{margin:'auto'}}>
                   <img  
                     src={auscopeLogo}
                     alt="AuScope Logo"    
@@ -417,9 +415,6 @@ IndexPageTemplate.propTypes = {
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   descMarkdown: PropTypes.object,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 }
 
 const IndexPage = ({ data }) => {
@@ -434,7 +429,6 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
         descMarkdown={frontmatter.descMarkdown}
       />
     </Layout>
@@ -474,20 +468,6 @@ export const pageQuery = graphql`
           childMarkdownRemark {
             html
           }
-        }
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
         }
       }
     }
