@@ -27,7 +27,8 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-  descMarkdown
+  descMarkdown,
+  reasons
 }) => (
   <div>
     <div 
@@ -130,7 +131,7 @@ export const IndexPageTemplate = ({
     </div>
     {/*end of the header */}
 
-    <h1 className="mc-title title">{mainpitch.title}</h1>
+    <h1 className="gp-landing-page-title title">{mainpitch.title}</h1>
 
     {/*start of the first section*/}
     <div className="container-fliud box" style={{backgroundColor: 'whitesmoke'}}>
@@ -139,9 +140,6 @@ export const IndexPageTemplate = ({
          
             <div className="columns section">
               <div className="column is-7">
-                {/*<div className="tile">
-                  <h1 className="mc-title title">{mainpitch.title}</h1>
-            </div>*/}
                 <div className="tile">
                   <div className="content" style={{fontSize: 'large'}}>
                       <HTMLContent content={descMarkdown.childMarkdownRemark.html}/>
@@ -185,53 +183,21 @@ export const IndexPageTemplate = ({
               </div>
               <div className="column is-7">
                 <div className="tile">
-                  <h1 className="mc-title title" style={{margin:"auto"}}>Why GPlates?</h1>
+                  <h1 className="gp-landing-page-title title" style={{margin:"auto"}}>Why GPlates?</h1>
                 </div>
-                <div className="tile">
+                <div className="tile" style={{marginTop:'1rem', display:'flex'}}>
                   <div className="content" style={{fontSize:"larger", margin:'auto'}}>
-                    <br></br>
-                    <p>
-                      <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
-                        <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
-                      </span>
-                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Open source and free</span>
-                    </p>
+                    
 
-                    <p>
-                      <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
-                        <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
-                      </span>
-                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Easy to use</span>
-                    </p>
-
-                    <p>
-                      <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
-                        <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
-                      </span>
-                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Fast and reliable</span>
-                    </p>
-
-                    <p>
-                      <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
-                        <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
-                      </span>
-                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Renowned researchers and scientists </span>
-                    </p>
-
-                    <p>
-                      <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
-                        <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
-                      </span>
-                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Professional software dev team</span>
-                    </p>
-
-                    <p>
-                      <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
-                        <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
-                      </span>
-                      <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>Proudly made in Australia in cooperation with EU and USA</span>
-                    </p>
-
+                    {reasons.map((reason) => (
+                      <p>
+                        <span className="icon" style={{verticalAlign: 'middle', color: 'green'}}> 
+                          <FontAwesomeIcon icon={faCheckCircle} className="svg-inline--fa fa-check-circle fa-w-16 fa-7x"/>
+                        </span>
+                        <span style={{verticalAlign: 'middle', marginLeft: '1rem'}}>{reason}</span>
+                      </p>
+                    ))}
+                    
                   </div>
                 </div>
               </div> 
@@ -415,6 +381,7 @@ IndexPageTemplate.propTypes = {
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   descMarkdown: PropTypes.object,
+  reasons: PropTypes.array,
 }
 
 const IndexPage = ({ data }) => {
@@ -429,6 +396,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         descMarkdown={frontmatter.descMarkdown}
+        reasons={frontmatter.reasons}
       />
     </Layout>
   )
@@ -467,6 +435,7 @@ export const pageQuery = graphql`
             html
           }
         }
+        reasons 
       }
     }
   }
