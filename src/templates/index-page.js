@@ -428,7 +428,6 @@ const IndexPage = ({ data }) => {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
         descMarkdown={frontmatter.descMarkdown}
       />
     </Layout>
@@ -463,7 +462,6 @@ export const pageQuery = graphql`
           title
           description
         }
-        description
         descMarkdown {
           childMarkdownRemark {
             html

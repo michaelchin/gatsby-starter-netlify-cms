@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import bgImg from '../img/topo_1200x600.png'
 
 export const SimplePageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -36,7 +37,7 @@ const SimplePage = ({ data }) => {
       <div
           className="full-width-image-container margin-top-0"
           style={{
-            backgroundImage: `url('/img/Starry-Night-Van-Gogh-Which-Stars-GoogleArtProject-1024x545.jpg')`,
+            backgroundImage: `url(${bgImg})`,
             marginBottom: '0'
           }}
         >

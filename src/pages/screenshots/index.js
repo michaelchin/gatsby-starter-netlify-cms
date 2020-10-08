@@ -3,6 +3,7 @@ import Layout from '../../components/Layout'
 import PropTypes from 'prop-types'
 import {Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
+import bgImg from '../../img/topo_1200x600.png'
 
 class Screenshots extends React.Component {
   render() {
@@ -14,7 +15,7 @@ class Screenshots extends React.Component {
         <div
           className="full-width-image-container margin-top-0"
           style={{
-            backgroundImage: `url('/img/Starry-Night-Van-Gogh-Which-Stars-GoogleArtProject-1024x545.jpg')`,
+            backgroundImage: `url(${bgImg})`,
           }}
         >
           <h2 className="has-text-weight-bold is-size-1 gp-title">

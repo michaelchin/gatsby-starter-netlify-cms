@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from '../../components/Layout'
 import NewsList from '../../components/NewsList'
+import bgImg from '../../img/topo_1200x600.png'
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -10,7 +11,7 @@ export default class BlogIndexPage extends React.Component {
         <div
           className="full-width-image-container margin-top-0"
           style={{
-            backgroundImage: `url('/img/Starry-Night-Van-Gogh-Which-Stars-GoogleArtProject-1024x545.jpg')`,
+            backgroundImage: `url(${bgImg})`,
           }}
         >
           <h1
